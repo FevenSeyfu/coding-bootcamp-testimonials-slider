@@ -6,16 +6,19 @@
 body {
   font-family: "Inter", sans-serif;
   background: #ffffff;
+  font-size: 32px;
   width: 100vw;
   height: 100vh;
 }
 
 main {
-  background-image: url('./src/images/pattern-curve.svg');
+  background-image: url("./src/images/pattern-curve.svg");
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 285px 72px;
   padding: 24px;
+  width: 100vw;
+  height: 100vh;
 }
 .section-img {
   display: flex;
@@ -96,7 +99,70 @@ main {
   color: #b9b9ce;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
+@media only screen and (min-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100vw;
+    position: relative;
+    background-size: 610px 150.94px;
+  }
+  .section-img {
+    width: 702px;
+    height: 663px;
+    position: absolute;
+    top: 44px;
+    right: 73px;
+    margin: 0;
+  }
+  .user-img {
+    height: 540px;
+    width: 540px;
+  }
+  .slider {
+    right: 450px;
+    bottom: 40px;
+    width: 112px;
+    height: 56px;
+    border-radius: 28px;
+  }
+  .slider > button > img {
+    height: 16px;
+    width: 8px;
+  }
+  .testimony {
+    text-align: left;
+    width: 635px;
+    height: 354px;
+    background-size: 120px 100px;
+    width: 635px;
+    height: 220px;
+    top: 234px;
+    left: 165px;
+    position: absolute;
+  }
+  .testimony-text {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+  }
+  .user-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  .user-name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  .user-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 38px;
   }
 }
