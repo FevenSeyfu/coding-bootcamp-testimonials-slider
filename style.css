@@ -115,7 +115,7 @@ main {
     background-size: 610px 150.94px;
   }
   .section-img {
-    width: 702px;
+    width: 48.75%;
     height: 663px;
     position: absolute;
     top: 44px;
@@ -139,14 +139,13 @@ main {
   }
   .testimony {
     text-align: left;
-    width: 635px;
+    width: 44.0972%;
     height: 354px;
     background-size: 120px 100px;
-    width: 635px;
-    height: 220px;
     top: 234px;
-    left: 165px;
+    left: 11.5%;
     position: absolute;
+    z-index: 1;
   }
   .testimony-text {
     font-size: 32px;

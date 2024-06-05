@@ -31,24 +31,33 @@ const btnNext = document.querySelector('.btn-next');
 let currentTestimonial = 0;
 
 
-function updateTestimonial(index) {
+const updateTestimonial = (index) => {
   const testimonial = data[index];
   userImg.src = testimonial.img;
   testimonyText.textContent = testimonial.testimony;
   userName.textContent = testimonial.name;
   userTitle.textContent = testimonial.title;
 }
-
-
-btnNext.addEventListener('click', () => {
-  currentTestimonial = (currentTestimonial + 1) % data.length;
-  updateTestimonial(currentTestimonial);
-});
-
-btnPrev.addEventListener('click', () => {
+const navigatePrevious = () => {
   currentTestimonial = (currentTestimonial - 1 + data.length) % data.length;
   updateTestimonial(currentTestimonial);
-});
+}
+const navigateNext = () => {
+  currentTestimonial = (currentTestimonial + 1) % data.length;
+  updateTestimonial(currentTestimonial);
+}
 
+btnNext.addEventListener('click',navigateNext);
+btnPrev.addEventListener('click', () => navigatePrevious);
+window.addEventListener('keydown', (event) => {
+  switch (event.key) {
+    case 'ArrowLeft':
+      navigatePrevious();
+      break;
+    case 'ArrowRight':
+      navigateNext();
+      break;
+  }
+});
 
 updateTestimonial(currentTestimonial);
